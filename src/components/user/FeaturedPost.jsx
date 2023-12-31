@@ -5,9 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { useMediaQuery } from "react-responsive";
 import "../../App.css"
 
-
-import { FeaturedPostCard } from '../BlogComps';
-import { getFeaturedPosts } from '../graphServices';
+import { FeaturedPostCard } from '../blogComps/index';
+import { getFeaturedPosts } from '../graphServices/index';
 
 
 const FeaturedPosts = () => {
