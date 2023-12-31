@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&family=Arvo:wght@700&family=Autour+One&family=Borel&family=Cardo:wght@700&family=Crimson+Text:wght@600&family=Headland+One&family=Julius+Sans+One&family=Lato:wght@700&family=Montserrat:wght@800&family=Nunito:wght@300&family=Oswald:wght@500&family=Pacifico&family=Playfair+Display:wght@700&family=Poiret+One&family=Poppins:wght@300&family=Raleway:wght@300&family=Reggae+One&family=Roboto&family=Roboto+Condensed&family=Train+One&family=Yeseva+One&family=Ysabeau+Infant:wght@200&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* font-family: 'Poppins', sans-serif;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Yeseva One', cursive;
+    font-family: 'Ysabeau Infant', serif;
+    font-family: 'Poiret One', cursive;
+    font-family: 'Julius Sans One', sans-serif;
+    font-family: 'Reggae One', cursive;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Train One', cursive;
+    font-family: 'Arvo', serif;
+    font-family: 'Crimson Text', serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Borel', cursive;
+    font-family: 'Autour One', cursive;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Pacifico', cursive; 
+    font-family: 'Headland One', serif; 
+    font-family: 'Playfair Display', serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+
+
+    */
+
+/* font section */
+.work-sans {
+  font-family: 'Work Sans', sans-serif;
+}
+.open-sans{
+  font-family: 'Open Sans', sans-serif;
+}
+/* Light (300) */
+.open-sans-light {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+/* Regular (400) */
+.open-sans-regular {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+/* Semibold (500) */
+.open-sans-semibold {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+}
+/* Bold (600) */
+.open-sans-bold {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+
+
+/* CSS for the marquee effect */
+.marquee {
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.my-element {
+  --animate-duration: 0.5s;
+}
+
+@media (min-width: 768px) {
+  .yellow-ring circle {
+    r : 130;
+    cx :  0;
+    cy :  400;
+    stroke-width: 60;
+    
+  
+  }
+}
+
+@media (min-width: 768px) {
+  .ring-blue circle {
+    r : 120;
+    cx :  0;
+    cy :  250;
+    stroke-width: 60;
+    
+  
+  }
+}
+
+@media (min-width: 768px) {
+  .ring-orange circle {
+    r : 230;
+    cx :  0;
+    cy :  750;
+    stroke-width: 60;
+    
+  
+  }
+}
+
+@media (min-width: 900px) {
+  .yellow-ring circle {
+    r : 150;
+    cx :  0;
+    cy :  380;
+    stroke-width: 80;
+    
+  
+  }
+}
+
+@media (min-width: 900px) {
+  .ring-blue circle {
+    r : 180;
+    cx :  0;
+    cy :  320;
+    stroke-width: 80;
+    
+  
+  }
+}
+
+@media (min-width: 900px) {
+  .ring-orange circle {
+    r : 250;
+    cx :  0;
+    cy :  720;
+    stroke-width: 80;
+    
+  
+  }
+}
+
+@media (min-width: 1024px) {
+  .yellow-ring circle {
+    r : 180;
+    cx :  50;
+    cy :  350;
+    stroke-width: 80;
+    
+  
+  }
+}
+
+@media (min-width: 1024px) {
+  .ring-blue circle {
+    r : 180;
+    cx :  0;
+    cy :  300;
+    stroke-width: 80;
+    
+  
+  }
+}
+
+@media (min-width: 1024px) {
+  .ring-orange circle {
+    r : 250;
+    cx :  0;
+    cy :  700;
+    stroke-width: 100;
+    
+  
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .yellow-ring circle {
+    r : 180;
+    cx :  50;
+    cy :  320;
+    stroke-width: 80;
+    
+  
+  }
+}
+
+@media (min-width: 1200px) {
+  .ring-blue circle {
+    r : 200;
+    cx :  0;
+    cy :  300;
+    stroke-width: 100;
+    
+  
+  }
+}
+
+@media (min-width: 1200px) {
+  .ring-orange circle {
+    r : 300;
+    cx :  0;
+    cy :  650;
+    stroke-width: 80;
+    
+  
+  }
+}
+
+
+@keyframes slide {
+  0% {
+    transform: translateY(-10%); 
+    opacity: 0; 
+  }
+  100% {
+    transform: translateY(0); 
+    opacity: 1; 
+  }
+}
+
+.dd {
+  animation: slide 0.65s ease-in-out;
+}
+
+.bd .slick-prev {
+  left: -40px;
+}
+.bd .slick-next {
+  right: -30px;
+}
+
+.bd .slick-prev:before,
+.bd .slick-next:before {
+  color: rgb(28, 2, 132); /* Set the arrow color to green */
+    font-size: 30px;
+
+}

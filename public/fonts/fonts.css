@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'opf'; /* Provide a name for your font */
+    src: url('./NextBro-EaA2W.ttf') format('truetype'); /* Adjust the path and format as needed */
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'opf2'; /* Provide a name for your font */
+    src: url('./AlloyInk-nRLyO.ttf') format('truetype'); /* Adjust the path and format as needed */
+    font-weight: normal;
+    font-style: normal;
+  }
