@@ -1,7 +1,7 @@
 import { request, gql } from "graphql-request";
 
 
-const GRAPHQL_ENDPOINT = "https://api-ap-south-1.hygraph.com/v2/clk7tdiy00qxy01t21tfz8j8t/master";
+const GRAPHQL_ENDPOINT = "https://api-ap-south-1.hygraph.com/v2/clqqf885o4c4u01t6ebcs65k0/master";
 
 export const getPosts = async () => {
   const query = gql`
