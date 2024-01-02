@@ -131,7 +131,7 @@ const SubCollections = ({ collectionName, handleModelClose }) => {
   };
 
   const handleReNameSub = async (newsubname) => {
-    console.log("inside rename");
+    // console.log("inside rename");
     try {
       const response = await axios.put(`https://engfluencers-final-backend.vercel.app/admin/worksheets/subcollections/${collectionName}`,
         {
@@ -140,7 +140,7 @@ const SubCollections = ({ collectionName, handleModelClose }) => {
         });
 
       if (response.status === 200) {
-        console.log("inside rename success");
+        // console.log("inside rename success");
         setCurrentSelectedSubcollection(null);
         alert("Collection updated successfully.");
         fetchSubCollections();
@@ -272,7 +272,7 @@ const SubCollections = ({ collectionName, handleModelClose }) => {
                                       onClick={() => {
                                         if (editingIndex === index) {
                                           // Handle the logic for saving the new name (e.g., making a backend API call)
-                                          console.log('Save the new name:', newSubName);
+                                          // console.log('Save the new name:', newSubName);
                                           // Exit editing mode
                                           setEditingIndex(-1);
                                           handleReNameSub(newSubName);
@@ -280,7 +280,7 @@ const SubCollections = ({ collectionName, handleModelClose }) => {
                                           setCurrentSelectedSubcollection(subcollection.name);
                                           // Enter editing mode for the current item
                                           setEditingIndex(index);
-                                          console.log("index", index)
+                                          // console.log("index", index)
                                           setNewSubName(subcollection.name); // Set the current name as the initial value
                                         }
                                       }}                                                    >
