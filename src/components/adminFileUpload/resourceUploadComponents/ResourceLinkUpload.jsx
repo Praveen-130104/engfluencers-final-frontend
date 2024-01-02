@@ -58,7 +58,7 @@ const ResourceLinkUpload = ({ currentSelectedRscSubcollection, isOpen, onClose }
                 });
 
                 if (response.status === 201) {
-                    console.log("Link uploaded successfully");
+                    // console.log("Link uploaded successfully");
                     alert("Link uploaded successfully");
                     // Clear form inputs after successful upload
                     setLinkName("");
@@ -66,7 +66,7 @@ const ResourceLinkUpload = ({ currentSelectedRscSubcollection, isOpen, onClose }
                     onClose();
                 }
                 else {
-                    console.log("Failed to upload link");
+                    // console.log("Failed to upload link");
                     alert("Failed to upload link");
                 }
             }
