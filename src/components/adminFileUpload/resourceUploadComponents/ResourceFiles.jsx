@@ -8,8 +8,8 @@ const ResourceFiles = ({ rscSubcollection }) => {
 
   const handleDeletePdfFile = async (subcollectionName, filename) => {
 
-    console.log("Deleting PDF file:", filename);
-    console.log("Subcollection name:", subcollectionName);
+    // console.log("Deleting PDF file:", filename);
+    // console.log("Subcollection name:", subcollectionName);
 
     try {
       const response = await axios.delete(`https://engfluencers-final-backend.vercel.app/admin/resources/files/pdfs/del?subcollectionName=${subcollectionName}&fileName=${filename}`);
@@ -20,6 +20,7 @@ const ResourceFiles = ({ rscSubcollection }) => {
       }
     }
     catch (error) {
+      alert("Error deleting file");
       console.error("Error deleting PDF file:", error);
     }
   };
