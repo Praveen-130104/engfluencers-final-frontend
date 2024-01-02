@@ -18,7 +18,7 @@ export const FileUpload = ({ isOpen, onClose, currentSelectedSubcollection }) =>
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(currentSelectedSubcollection);
+    // console.log(currentSelectedSubcollection);
     try {
       //display separate alert messages for empty filename and file inputs
       if (!filename && !selectedFile) {
@@ -44,7 +44,7 @@ export const FileUpload = ({ isOpen, onClose, currentSelectedSubcollection }) =>
       const response = await axios.post(url, formData);
 
       if (response.status === 201) {
-        console.log("File uploaded successfully");
+        // console.log("File uploaded successfully");
         // Clear form inputs after successful upload
         setfilename("");  
         setSelectedFile(null);
@@ -53,7 +53,7 @@ export const FileUpload = ({ isOpen, onClose, currentSelectedSubcollection }) =>
         
 
       } else {
-        console.log("Failed to upload file");
+        // console.log("Failed to upload file");
         alert("Failed to upload file");
       }
     } catch (error) {
