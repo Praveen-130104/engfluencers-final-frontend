@@ -62,6 +62,7 @@ const WorkSheets = () => {
             URL.revokeObjectURL(url);
 
         } catch (error) {
+            alert("Error in downloading the file");
             console.error('Error downloading the file:', error);
         }finally
         {
