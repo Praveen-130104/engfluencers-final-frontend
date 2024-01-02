@@ -1,4 +1,4 @@
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // function Navbar() {
 //     return (
@@ -75,12 +75,14 @@ const  Navbar = () => {
 
             <div className="w-full h-14 my-2 sm:my-0 sm:h-20 relative">
 
-                <div className="flex items-center h-full w-2/3 sm:w-1/3 animate__animated animate__slideInLeft animate__delay-0.8s">
-                    <img
-                        className="h-3/5 lg:ps-10 ps-2"
-                        src="https://res.cloudinary.com/dfsvudyfv/image/upload/v1696088195/WhatsApp_Image_2023-09-25_at_12.-removebg-preview_k4u77o.png"
-                        alt="logo"
-                    />
+               <div className="flex items-center h-full w-2/3 sm:w-1/3 animate__animated animate__slideInLeft animate__delay-0.8s">
+                    <Link to='/' className=" h-1/2 ps-2  md:mx-4">
+                        <img
+                            className="h-full"
+                            src="https://res.cloudinary.com/dfsvudyfv/image/upload/v1696088195/WhatsApp_Image_2023-09-25_at_12.-removebg-preview_k4u77o.png"
+                            alt="logo"
+                        />
+                    </Link>    
                 </div>
 
                 <div className="h-full w-2/3  absolute top-0 right-0 ">
