@@ -111,6 +111,7 @@ const Resources = () => {
             URL.revokeObjectURL(url);
 
         } catch (error) {
+            alert("Error in downloading the file");
             console.error('Error downloading the file:', error);
         }
         finally {
@@ -479,7 +480,7 @@ const Resources = () => {
                                                                             className="py-3 px-4 hover:bg-white border-b-2 border-white font-semibold hover:shadow-lg w-full text-xl lg:text-2xl text-blue-900"
                                                                             onClick={() => {
                                                                                 toggleSelectedSubcollection(subcollection);
-                                                                                console.log(index);
+                                                                                // console.log(index);
                                                                             }
                                                                             }
                                                                         >
