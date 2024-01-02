@@ -19,7 +19,7 @@ const ResourceFileUpload = ({isOpen, onClose , currentSelectedRscSubcollection})
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(currentSelectedRscSubcollection);
+    // console.log(currentSelectedRscSubcollection);
     try {
       //display separate alert messages for empty filename and file inputs
       if (!filename && !selectedFile) {
@@ -52,7 +52,7 @@ const ResourceFileUpload = ({isOpen, onClose , currentSelectedRscSubcollection})
         onClose();
 
       } else {
-        console.log("Failed to upload file");
+        // console.log("Failed to upload file");
         alert("Failed to upload file");
       }
     } catch (error) {
