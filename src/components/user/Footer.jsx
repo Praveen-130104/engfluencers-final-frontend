@@ -99,7 +99,7 @@ const Footer = () => {
                 className="mt-12 text-center text-white w-full text- "
                 style={{ fontFamily: "poppins" }}
             >
-                Copyrights @ 2023 Engfluencers - Privacy | Terms of Service
+                Copyrights @ 2024 Engfluencers - Privacy | Terms of Service
             </p>
         </div>
     )
