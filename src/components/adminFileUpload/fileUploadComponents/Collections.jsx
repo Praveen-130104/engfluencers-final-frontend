@@ -134,7 +134,7 @@ const Collections = ({ selectedCollection, updateSelectedCollection , sizeFunc})
     };
 
     const handleDeleteCollection = async (collectionId) => {
-        console.log(collectionId);
+        // console.log(collectionId);
         try {
             const response = await axios.delete(`https://engfluencers-final-backend.vercel.app/admin/collections/${collectionId}`);
 
