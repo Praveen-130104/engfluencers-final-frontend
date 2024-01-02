@@ -129,7 +129,7 @@ const AdminResourceUpload = () => {
     }
 
     const handleDeleteRscCollection = async (collectionId) => {
-        console.log(collectionId);
+        // console.log(collectionId);
         try {
             const response = await axios.delete(`https://engfluencers-final-backend.vercel.app/admin/resources/${collectionId}`);
 
@@ -148,7 +148,7 @@ const AdminResourceUpload = () => {
     const handleCollectionClick = (collectName) => {
         setSelectedRscCollection(collectName);
 
-        console.log(isMediumScreen)
+        // console.log(isMediumScreen)
 
         if (isMediumScreen) {
             const modalElement = document.getElementById('defaultModal');
@@ -170,13 +170,13 @@ const AdminResourceUpload = () => {
 
     useEffect(() => {
         const subscribe = auth.onAuthStateChanged((user) => {
-            console.log("user", user);
+            // console.log("user", user);
             if (user) {
                 setIsAuth(true);
-                console.log("User is signed in");
+                // console.log("User is signed in");
             } else {
 
-                console.log("User is not signed in")
+                // console.log("User is not signed in")
                 window.location.href = '/admin';
             }
         });
