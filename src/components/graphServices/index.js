@@ -107,7 +107,7 @@ export const getComments = async (slug) => {
 
   const result = await request(GRAPHQL_ENDPOINT , query, { slug });
   //console the result
-  console.log("result getCOmments func => ", result );
+  // console.log("result getCOmments func => ", result );
 
   return result.comments;
 };
