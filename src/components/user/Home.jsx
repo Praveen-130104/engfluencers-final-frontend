@@ -12,7 +12,7 @@ const Home = () => {
     useEffect(() => {
 
         const loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
-        console.log(`Time to fully render: ${loadTime}ms`);
+        // console.log(`Time to fully render: ${loadTime}ms`);
 
         window.scrollTo(0, 0);
 
@@ -60,7 +60,7 @@ const Home = () => {
                             ></div>
 
                             <div className="z-50 flex flex-col justify-center items-center  w-full h-3/4  ">
-                                <h1 className="my-element animate__animated animate__flipInX animate__slower text-[3rem] mx-auto md:text-[4.8rem] lg:text-[5.8rem] xl:text-[6rem] 2xl:text-[6.3rem]  text-white font-bold sm:tracking-[0.6rem] tracking-[4.3px]" style={{
+                                <h1 className="my-element animate__animated animate__flipInX animate__slower  text-[3.3rem]  sm:text-[3.5rem] mx-auto md:text-[4.8rem] lg:text-[5.8rem] xl:text-[6rem] 2xl:text-[6.3rem]  text-white font-bold sm:tracking-[0.6rem] tracking-[4.3px]" style={{
                                     fontFamily: "Oswald",
                                     filter: "drop-shadow(0px 0px 2px #000000)",
                                     textShadow: "2px 4px 6px rgba(0, 0, 0, 1)"
