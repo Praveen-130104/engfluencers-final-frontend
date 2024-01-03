@@ -166,8 +166,8 @@
 
 @media (min-width: 1024px) {
   .yellow-ring circle {
-    r : 180;
-    cx :  50;
+    r : 150;
+    cx :  0;
     cy :  350;
     stroke-width: 80;
     
@@ -177,10 +177,10 @@
 
 @media (min-width: 1024px) {
   .ring-blue circle {
-    r : 180;
+    r : 150;
     cx :  0;
-    cy :  300;
-    stroke-width: 80;
+    cy :  250;
+    stroke-width: 60;
     
   
   }
@@ -188,10 +188,10 @@
 
 @media (min-width: 1024px) {
   .ring-orange circle {
-    r : 250;
+    r : 220;
     cx :  0;
-    cy :  700;
-    stroke-width: 100;
+    cy :  750;
+    stroke-width: 80;
     
   
   }
