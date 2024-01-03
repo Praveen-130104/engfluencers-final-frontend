@@ -370,7 +370,7 @@ Embark on an exceptional journey to elevate your English proficiency. Our dynami
 
                                 <div className="p-6 select-none">
 
-                                    <div className=" w-3/4 sm:w-full md:w-5/6 lg:w-full xl:w-4/5 2xl:w-3/4 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12  text-center">
+                                    <div className=" w-3/4 sm:w-full md:w-5/6 lg:w-full xl:w-4/5 2xl:w-3/4 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-4 xl:gap-10  text-center">
 
                                         <div
                                             data-aos="fade-up"
@@ -395,7 +395,7 @@ Embark on an exceptional journey to elevate your English proficiency. Our dynami
 
                                                 </h3>
                                                 <p
-                                                    className="mt-4 py-2    px-8 font-bold text-md sm:text-lg md:text-[1rem] lg:text-lg"
+                                                    className="mt-4 py-2    px-8 font-bold text-md sm:text-lg md:text-[1rem] lg:text-md"
                                                     style={{ fontFamily: "Ysabeau Infant" }}
                                                 >
                                                     We offer exceptional personalized support.
@@ -427,7 +427,7 @@ Embark on an exceptional journey to elevate your English proficiency. Our dynami
                                                     Meticulously Crafted Syllabus
                                                 </h3>
                                                 <p
-                                                    className="mt-4 py-2 px-8 font-bold text-md sm:text-lg md:text-[1rem] lg:text-lg"
+                                                    className="mt-4 py-2 px-8 font-bold text-md sm:text-lg md:text-[1rem] lg:text-md"
                                                     style={{ fontFamily: "Ysabeau Infant" }}
                                                 >
                                                     Our meticulously designed syllabus ensures comprehensive English mastery,
@@ -459,7 +459,7 @@ Embark on an exceptional journey to elevate your English proficiency. Our dynami
                                                     Quality Content
                                                 </h3>
                                                 <p
-                                                    className="mt-4 py-2 px-8 font-bold text-md sm:text-lg md:text-[1rem] lg:text-lg"
+                                                    className="mt-4 py-2 px-8 font-bold text-md sm:text-lg md:text-[1rem] lg:text-md"
                                                     style={{ fontFamily: "Ysabeau Infant" }}
                                                 >
                                                     Our diverse, engaging content guarantees an immersive,
