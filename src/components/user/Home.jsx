@@ -156,7 +156,7 @@ const Home = () => {
                                         <img
                                             src="https://res.cloudinary.com/dfsvudyfv/image/upload/v1696054284/tesst_zwgbqw.png"
                                             alt=""
-                                            className="w-full lg:w-4/5 h-auto mx-auto "
+                                            className="w-full lg:w-4/5 py-8 h-auto mx-auto "
                                         />
                                     </div>
                                     <div data-aos="fade-left"
