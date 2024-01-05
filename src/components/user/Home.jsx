@@ -271,7 +271,7 @@ const Home = () => {
 
                                         <div className="mess absolute inset-0 flex flex-col justify-center items-center text-white ">
                                             <h1 className="text-md md:text-2xl xl:text-4xl mt-6 mb-3  font-bold tracking-wider" style={{ fontFamily: "Autour One" }}>SEEKER</h1>
-                                            <h3 className='mb-4 bg-white text-orange-500 shadow-lg md:px-4 py-1 px-2  text-sm sm:text-md md:text-lg rounded-md font-semibold tracking-wider'>LEVEL 3</h3>
+                                            <h3 className='mb-4 bg-white text-orange-500 shadow-lg md:px-4 py-1 px-2  text-sm sm:text-md md:text-lg rounded-md font-semibold tracking-wider'>LEVEL 1</h3>
                                             <ul className="text-md text-center  space-y-2 ps-3 list-outside list-none md:text-sm lg:text-lg hidden md:block">
                                                 <li>Basic Academic Grammar</li>
                                                 <li>Reading</li>
@@ -297,7 +297,7 @@ const Home = () => {
 
                                         <div className=" absolute inset-0 flex flex-col justify-center items-center ">
                                             <h1 className="text-md md:text-2xl xl:text-4xl mt-6 mb-3  font-bold tracking-wider" style={{ fontFamily: "Autour One" }}>EXPLORER</h1>
-                                            <h3 className='mb-4 bg-white text-orange-300 shadow-lg md:px-4 py-1 px-2  text-sm sm:text-md md:text-lg rounded-md font-semibold tracking-wider'>LEVEL 3</h3>
+                                            <h3 className='mb-4 bg-white text-orange-300 shadow-lg md:px-4 py-1 px-2  text-sm sm:text-md md:text-lg rounded-md font-semibold tracking-wider'>LEVEL 2</h3>
                                             <ul className="text-md text-center  space-y-2 ps-3 list-outside list-none md:text-sm lg:text-lg hidden md:block">
                                                 <li >Academic Grammar</li>
                                                 <li>Framing Sentences</li>
