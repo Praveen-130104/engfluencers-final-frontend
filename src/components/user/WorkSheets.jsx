@@ -340,7 +340,7 @@ const WorkSheets = () => {
                                                         <h1 className={`w-full font-bold px-4  text-xl tracking-widest text-white  ${ selectedCollection.name.length > 20 ? 'marquee ' : ''}`}>
                                                             {selectedCollection.name.toUpperCase()}
                                                         </h1>
-                                                        <span className="w-6 h-6 ms-auto bg-white rounded-md" onClick={handleModelClose}>
+                                                        <span className="w-6 h-6 right-4 fixed ms-auto bg-white rounded-md" onClick={handleModelClose}>
                                                             <AiOutlineClose className=" text-xl w-full h-full text-red-600 " />
                                                         </span>
                                                     </div>
@@ -370,7 +370,7 @@ const WorkSheets = () => {
                                                                     }
                                                                       >
                                                                         <li
-                                                                            className=" py-3 px-4 hover:text-blue-500  hover:scale-105 hover:translate-x-4 transition-all ease-in-out duration-300 hover:border-blue-900 border-b-2 border-white font-semibold w-full text-xl lg:text-2xl text-blue-900"
+                                                                            className=" py-3 px-4 hover:text-blue-500  hover:scale-105 hover:translate-x-4 transition-all ease-in-out duration-300 hover:border-blue-900 font-semibold w-full text-xl lg:text-2xl text-blue-900"
                                                                         >
                                                                             {subcollection.name.charAt(0).toUpperCase() + subcollection.name.slice(1)}
 
