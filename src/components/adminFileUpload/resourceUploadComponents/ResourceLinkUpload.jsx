@@ -11,6 +11,8 @@ const ResourceLinkUpload = ({ currentSelectedRscSubcollection, isOpen, onClose }
 
     const [linkUrl, setLinkUrl] = useState('');
 
+    const [uploadClicked, setUploadClicked] = useState(false);
+
     const handleLinkNameChange = (e) => {
         setLinkName(e.target.value); // Update the link name state
     };
@@ -43,6 +45,8 @@ const ResourceLinkUpload = ({ currentSelectedRscSubcollection, isOpen, onClose }
                     return;
                 }
 
+                setUploadClicked(true);
+                
                 const formData = new FormData();
                 formData.append("linkName", linkName);
                 formData.append("linkUrl", linkUrl);
@@ -58,6 +62,7 @@ const ResourceLinkUpload = ({ currentSelectedRscSubcollection, isOpen, onClose }
                 });
 
                 if (response.status === 201) {
+                     setUploadClicked(false);
                     // console.log("Link uploaded successfully");
                     alert("Link uploaded successfully");
                     // Clear form inputs after successful upload
@@ -149,12 +154,27 @@ const ResourceLinkUpload = ({ currentSelectedRscSubcollection, isOpen, onClose }
 
                             </div>
 
-                            <button
-                                type="submit"
-                                className="tracking-wider text-green-500 hover:text-white border-2 border-green-600 mx-2 hover:bg-green-600 py-2 px-4 rounded-lg transition-colors duration-300 ease-in-out"
-                            >
-                                UPLOAD
-                            </button>
+                            {
+                                uploadClicked ? (
+                                    <>
+                                        <button
+                                            className="tracking-wider text-green-500 hover:text-white border-2 border-green-600 mx-2 hover:bg-green-600 py-2 px-4 rounded-lg transition-colors duration-300 ease-in-out"
+                                        >
+                                            UPLOADING...
+                                        </button>
+                                    </>
+                                ) :
+                                    (
+                                        <>
+                                            <button
+                                                type="submit"
+                                                className="tracking-wider text-green-500 hover:text-white border-2 border-green-600 mx-2 hover:bg-green-600 py-2 px-4 rounded-lg transition-colors duration-300 ease-in-out"
+                                            >
+                                                UPLOAD
+                                            </button>
+                                        </>
+                                    )
+                            }
                             <button
                                 type="button"
                                 onClick={handleClearForm}
