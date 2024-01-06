@@ -168,14 +168,16 @@ const Resources = () => {
                                                                         <div key={rscCol._id}
                                                                             className="hover:cursor-pointer border-0 border-b-2 border-gray-300 w-full my-2 hover:shadow-lg group text-blue-800 hover:bg-white align-middle "
                                                                         >
-                                                                            <div className=" w-full h-auto truncate">
+                                                                            <div className=" w-full h-auto truncate"
+                                                                                   onClick={() => handleRscCollectionClick(rscCol)}
+                                                                                >
 
                                                                             <li
                                                                                 key={id}
-                                                                                onClick={() => handleRscCollectionClick(rscCol)}
-                                                                                className={`py-4 transition-all ease-in-out group-hover:scale-105 group-hover:translate-x-4 duration-300 font-semibold text-xl ${rscCol === selectedRscCollection ? "text-blue-900 shadow-md scale-105 underline bg-white translate-x-4" : "text-black"} ${rscCol.name.length > 20 ? 'marquee' : ''}   hover:bg-white hover:text-blue-600 px-4 flex items-center justify-between`}
+                                                                             
+                                                                                className={`py-4 transition-all ease-in-out group-hover:scale-105 group-hover:translate-x-4 duration-300 font-semibold text-xl ${rscCol === selectedRscCollection ? "text-blue-900 scale-105 underline bg-white translate-x-4" : "text-black"} ${rscCol.name.length > 20 ? 'marquee' : ''}   hover:bg-white hover:text-blue-600 px-4 flex items-center justify-between`}
                                                                             >
-                                                                                <p className=" truncate ">
+                                                                                <p className=" ">
                                                                                     {rscCol.name.toUpperCase()}
                                                                                 </p>
                                                                             </li>
@@ -213,9 +215,9 @@ const Resources = () => {
 
                                                             <div id="subcol" className={`  animate__animated animate__slideInRight w-full`}  >
 
-                                                                <div className="w-full bg-blue-950 py-6 text-center">
-                                                                    <h1 className="font-bold xl:text-3xl text-xl tracking-widest text-white">
-                                                                        CONTENTS OF {selectedRscCollection.name.toUpperCase()}
+                                                                <div className="w-full bg-blue-950 py-6 text-center truncate">
+                                                                    <h1 className={`font-bold xl:text-3xl text-xl  tracking-widest text-white ${selectedRscCollection.name.length > 20 ? 'marquee' : ''}`}>
+                                                                        {selectedRscCollection.name.toUpperCase()}
                                                                     </h1>
                                                                 </div>
 
@@ -236,7 +238,7 @@ const Resources = () => {
                                                                                     <div key={subcollection._id} className="hover:cursor-pointer w-full my-2 align-middle " >
 
                                                                                         <li
-                                                                                            className="py-3 px-4 hover:bg-white border-b-2 border-white font-semibold hover:shadow-lg w-full text-xl lg:text-2xl text-blue-900"
+                                                                                            className="py-3 px-4 hover:bg-white  hover:text-blue-500  hover:scale-105 hover:translate-x-4 transition-all ease-in-out duration-300 hover:border-blue-900 border-b-2 border-white font-semibold hover:shadow-lg w-full text-xl lg:text-2xl text-blue-900"
                                                                                             onClick={() => {
                                                                                                 toggleSelectedSubcollection(subcollection);
                                                                                                 // console.log(index);
@@ -444,7 +446,7 @@ const Resources = () => {
                             {/* small screen modal sub */}
 
 
-                            <div id="defaultModal" tabIndex="-1" aria-hidden="true" className=" md:hidden hidden fixed top-8 w-full h-full ">
+                            <div id="defaultModal" tabIndex="-1" aria-hidden="true" className="z-50 md:hidden hidden fixed top-8 w-full h-full ">
                                 <div className="bg-slate-950 p-6 bg-opacity-50 backdrop-blur-md h-full flex justify-center items-center w-full ">
                                     <div className="w-full mx-auto animate__animated animate__zoomIn sm:w-9/12 md:hidden">
 
@@ -452,11 +454,11 @@ const Resources = () => {
                                             selectedRscCollection !== null &&
                                             <div className="">
                                                 <div className="w-full bg-blue-950 py-6 text-center rounded-t-xl">
-                                                    <div className="flex justify-center items-center px-4">
-                                                        <h1 className="w-full font-bold px-4  text-xl tracking-widest text-white">
+                                                    <div className="flex justify-center items-center px-4 truncate">
+                                                        <h1 className={`w-full font-bold px-4  text-xl tracking-widest text-white ${ selectedRscCollection.name.length > 20 ? 'marquee ' : ''}`}>
                                                             {selectedRscCollection.name.toUpperCase()}
                                                         </h1>
-                                                        <span className="w-6 h-6 ms-auto bg-white rounded-md" onClick={handleModelClose}>
+                                                        <span className="w-6 h-6 right-4 fixed ms-auto bg-white rounded-md" onClick={handleModelClose}>
                                                             <AiOutlineClose className=" text-xl w-full h-full text-red-600 " />
                                                         </span>
                                                     </div>
@@ -476,18 +478,19 @@ const Resources = () => {
                                                                 .slice() // Create a copy of the array to avoid modifying the original array
                                                                 .reverse()
                                                                 .map((subcollection, index) => (
-                                                                    <div key={subcollection._id} className="hover:cursor-pointer w-full my-2 align-middle " >
-
-                                                                        <li
-                                                                            className="py-3 px-4 hover:bg-white border-b-2 border-white font-semibold hover:shadow-lg w-full text-xl lg:text-2xl text-blue-900"
+                                                                    <div key={subcollection._id} className="hover:cursor-pointer w-full my-1 py-1  border-b-2 border-white align-middle "  >
+                                                                        <div className="w-full h-auto  hover:bg-white hover:border-b-2 border-blue-900"
                                                                             onClick={() => {
                                                                                 toggleSelectedSubcollection(subcollection);
                                                                                 // console.log(index);
                                                                             }
-                                                                            }
+                                                                            }>
+                                                                        <li
+                                                                            className="py-3 px-4 hover:text-blue-500  hover:scale-105 hover:translate-x-4 transition-all ease-in-out duration-300 hover:border-blue-900 font-semibold hover:shadow-lg w-full text-xl lg:text-2xl text-blue-900"
                                                                         >
                                                                             {subcollection.name.charAt(0).toUpperCase() + subcollection.name.slice(1)}
                                                                         </li>
+                                                                            </div>
 
                                                                         {subcollection.isExpanded && (
                                                                             <div
