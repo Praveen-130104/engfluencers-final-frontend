@@ -93,6 +93,16 @@
   100% { transform: rotate(360deg); }
 }
 
+.sel-div.loaded > img{
+  opacity: 1;
+}
+
+.sel-div > img {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+
 
 .my-element {
   --animate-duration: 0.5s;
