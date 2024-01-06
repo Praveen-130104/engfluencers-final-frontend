@@ -168,6 +168,7 @@ const Resources = () => {
                                                                         <div key={rscCol._id}
                                                                             className="hover:cursor-pointer border-0 border-b-2 border-gray-300 w-full my-2 hover:shadow-lg group text-blue-800 hover:bg-white align-middle "
                                                                         >
+                                                                            <div className="bg-red-300 w-full h-auto truncate">
 
                                                                             <li
                                                                                 key={id}
@@ -178,6 +179,7 @@ const Resources = () => {
                                                                                     {rscCol.name.toUpperCase()}
                                                                                 </p>
                                                                             </li>
+                                                                                </div>
                                                                         </div>
                                                                     ))}
 
