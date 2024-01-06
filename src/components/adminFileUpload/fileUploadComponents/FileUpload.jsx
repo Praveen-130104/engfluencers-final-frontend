@@ -7,6 +7,8 @@ export const FileUpload = ({ isOpen, onClose, currentSelectedSubcollection }) =>
   const [filename, setfilename] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
 
+    const [uploadClicked, setUploadClicked] = useState(false);
+
   const handlefilenameChange = (event) => {
     setfilename(event.target.value);
   };
@@ -33,6 +35,7 @@ export const FileUpload = ({ isOpen, onClose, currentSelectedSubcollection }) =>
         alert("Please choose a file");
         return;
       }
+       setUploadClicked(true);
 
       const formData = new FormData();
       formData.append("filename", filename);
@@ -44,7 +47,8 @@ export const FileUpload = ({ isOpen, onClose, currentSelectedSubcollection }) =>
       const response = await axios.post(url, formData);
 
       if (response.status === 201) {
-        // console.log("File uploaded successfully");
+        setUploadClicked(false);
+        alert("File uploaded successfully");
         // Clear form inputs after successful upload
         setfilename("");  
         setSelectedFile(null);
@@ -145,12 +149,27 @@ export const FileUpload = ({ isOpen, onClose, currentSelectedSubcollection }) =>
                 </div>
               </div>
 
-              <button
-                type="submit"
-                className="tracking-wider text-green-500 hover:text-white border-2 border-green-600 mx-2 hover:bg-green-600 py-2 px-4 rounded-lg transition-all duration-300 ease-in-out"
-              >
-                UPLOAD
-              </button>
+               {
+                uploadClicked ? (
+                  <>
+                    <button
+                      className="tracking-wider text-green-500 hover:text-white border-2 border-green-600 mx-2 hover:bg-green-600 py-2 px-4 rounded-lg transition-all duration-300 ease-in-out"
+                    >
+                      UPLOADING...
+                    </button>
+                  </>
+                ) :
+                  (
+                    <>
+                      <button
+                        type="submit"
+                        className="tracking-wider text-green-500 hover:text-white border-2 border-green-600 mx-2 hover:bg-green-600 py-2 px-4 rounded-lg transition-all duration-300 ease-in-out"
+                      >
+                        UPLOAD
+                      </button>
+                    </>
+                  )
+              }
               <button
                 type="button"
                 onClick={handleClearForm}
