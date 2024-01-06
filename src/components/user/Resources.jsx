@@ -175,7 +175,7 @@ const Resources = () => {
                                                                             <li
                                                                                 key={id}
                                                                              
-                                                                                className={`py-4 transition-all ease-in-out group-hover:scale-105 group-hover:translate-x-4 duration-300 font-semibold text-xl ${rscCol === selectedRscCollection ? "text-blue-900 scale-105 underline bg-white translate-x-4" : "text-black"} ${rscCol.name.length > 20 ? 'marquee' : ''}   hover:bg-white hover:text-blue-600 px-4 flex items-center justify-between`}
+                                                                                className={`py-4 transition-all ease-in-out group-hover:scale-105 group-hover:translate-x-4 duration-300 font-semibold text-xl ${rscCol === selectedRscCollection ? "text-blue-900 scale-105 underline translate-x-4" : "text-black"} ${rscCol.name.length > 20 ? 'marquee' : ''}  hover:text-blue-600 px-4 flex items-center justify-between`}
                                                                             >
                                                                                 <p className=" ">
                                                                                     {rscCol.name.toUpperCase()}
