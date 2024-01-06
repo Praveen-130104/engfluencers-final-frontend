@@ -149,7 +149,7 @@ const Home = () => {
                                 </svg>
                             </div>
 
-                            <div className="hidden md:block overflow-visible absolute top-0 -z-50"
+                            <div className="hidden md:block overflow-visible absolute top-0 z-0"
                                 style={{
                                     position: 'fixed',
                                     transform: "scaleX(-1) ",
