@@ -140,13 +140,15 @@ const WorkSheets = () => {
 
                                                                         {collections.map((collection, id) => (
                                                                             <div key={id}
-                                                                                className="hover:cursor-pointer border-0 border-b-2 border-sky-200 w-full my-2 hover:shadow-lg group text-blue-800 hover:bg-white align-middle "
+                                                                                className="hover:cursor-pointer flex height-16 border-0 border-b-2 border-sky-200 w-full my-2 hover:shadow-lg group text-blue-800 align-middle "
                                                                             >
-                                                                                <div className=" w-full h-auto truncate">
+                                                                                <div className=" w-full h-auto truncate"
+                                                                                    onClick={() => handleCollectionClick(collection)}
+                                                                                    >
                                                                                 <li
                                                                                     key={collection._id}
-                                                                                    onClick={() => handleCollectionClick(collection)}
-                                                                                    className={`py-4 transition-all ease-in-out group-hover:scale-105 group-hover:translate-x-4 duration-300 font-semibold text-xl ${collection === selectedCollection ? "text-blue-900 shadow-md scale-105 underline bg-white translate-x-4" : "text-black"} ${collection.name.length > 20 ? 'marquee' : ''}   hover:bg-white hover:text-blue-600 px-4 flex items-center justify-between`}
+                                                                                    
+                                                                                    className={`py-4 transition-all w-full ease-in-out group-hover:scale-105 group-hover:translate-x-4 duration-300 font-semibold text-xl ${collection === selectedCollection ? "text-blue-900 scale-105 underline translate-x-4" : "text-black"} ${collection.name.length > 20 ? 'marquee' : ''} hover:text-blue-600 px-4 flex items-center justify-between`}
                                                                                 >
                                                                                     <p className=" ">
                                                                                         {collection.name.toUpperCase()}
@@ -187,8 +189,8 @@ const WorkSheets = () => {
 
                                                             <div id="subcol" className={`  animate__animated animate__backInDown w-full`}  >
 
-                                                                <div className="w-full bg-blue-950 py-6 text-center">
-                                                                    <h1 className="font-bold xl:text-3xl text-xl tracking-widest text-white">
+                                                                <div className="w-full bg-blue-950 py-6 text-center truncate">
+                                                                    <h1 className={`font-bold xl:text-3xl text-xl tracking-widest text-white ${selectedCollection.name.length > 20 ? 'marquee' : ''}`}>
                                                                         CONTENTS OF {selectedCollection.name.toUpperCase()}
                                                                     </h1>
                                                                 </div>
@@ -326,7 +328,7 @@ const WorkSheets = () => {
                             {/* small screen modal sub */}
 
 
-                            <div id="defaultModal" tabIndex="-1" aria-hidden="true" className=" md:hidden hidden fixed top-8 w-full h-full ">
+                            <div id="defaultModal" tabIndex="-1" aria-hidden="true" className="z-50 md:hidden hidden fixed top-8 w-full h-full ">
                                 <div className="bg-slate-950 p-6 bg-opacity-50 backdrop-blur-md h-full flex justify-center items-center w-full ">
                                     <div className="w-full mx-auto animate__animated animate__zoomIn sm:w-9/12 md:hidden">
 
@@ -334,8 +336,8 @@ const WorkSheets = () => {
                                             selectedCollection !== null &&
                                             <div className="">
                                                 <div className="w-full bg-blue-950 py-6 text-center rounded-t-xl">
-                                                    <div className="flex justify-center items-center px-4">
-                                                        <h1 className="w-full font-bold px-4  text-xl tracking-widest text-white">
+                                                    <div className="flex justify-center items-center px-4 truncate">
+                                                        <h1 className={`w-full font-bold px-4  text-xl tracking-widest text-white  ${ selectedCollection.name.length > 20 ? 'marquee ' : ''}`}>
                                                             {selectedCollection.name.toUpperCase()}
                                                         </h1>
                                                         <span className="w-6 h-6 ms-auto bg-white rounded-md" onClick={handleModelClose}>
@@ -359,19 +361,22 @@ const WorkSheets = () => {
                                                                 .slice() // Create a copy of the array to avoid modifying the original array
                                                                 .reverse()
                                                                 .map((subcollection) => (
-                                                                    <div key={subcollection._id} className="hover:cursor-pointer w-full my-1 py-2 align-middle" >
+                                                                    <div key={subcollection._id} className="hover:cursor-pointer w-full my-1 py-2 border-b-2 border-white  align-middle" >
 
+                                                                        <div className="w-full h-auto  hover:bg-white hover:border-b-2 border-blue-900"
+                                                                      onClick={() => {
+                                                                        toggleSelectedSubcollection(subcollection);
+                                                                    }
+                                                                    }
+                                                                      >
                                                                         <li
-                                                                            className=" py-3 px-4 hover:bg-white hover:text-blue-500  hover:scale-105 hover:translate-x-4 transition-all ease-in-out duration-300 hover:border-blue-900 border-b-2 border-white font-semibold hover:shadow-lg w-full text-xl lg:text-2xl text-blue-900"
-                                                                            onClick={() => {
-                                                                                toggleSelectedSubcollection(subcollection);
-                                                                            }
-                                                                            }
+                                                                            className=" py-3 px-4 hover:text-blue-500  hover:scale-105 hover:translate-x-4 transition-all ease-in-out duration-300 hover:border-blue-900 border-b-2 border-white font-semibold w-full text-xl lg:text-2xl text-blue-900"
                                                                         >
                                                                             {subcollection.name.charAt(0).toUpperCase() + subcollection.name.slice(1)}
 
 
                                                                         </li>
+                                                                            </div>
                                                                         {subcollection.isExpanded && (
                                                                             (
                                                                                 subcollection.files.length > 0 ? (
