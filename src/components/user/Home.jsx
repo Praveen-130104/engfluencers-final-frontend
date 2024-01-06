@@ -9,6 +9,8 @@ const Home = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
     const [dataLoaded, setDataLoaded] = useState(false);
 
+     const [imgLoaded, setImgLoaded] = useState(false);
+
     useEffect(() => {
 
         const loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
@@ -36,6 +38,10 @@ const Home = () => {
 
     }, []);
 
+      const handleImageLoaded = () => {
+        setImgLoaded(true);
+    };
+
     const svgTopPosition = -scrollPosition;
 
 
@@ -47,17 +53,30 @@ const Home = () => {
             {dataLoaded ?
                 (
                     <>
-                        <div className="w-full h-screen relative sm:flex flex-col justify-center items-center overflow-hidden" >
+                        <div className="w-full h-screen relative sm:flex flex-col justify-center items-center overflow-hidden" 
+                            style={{
+                                backgroundImage: "url('https://res.cloudinary.com/dfsvudyfv/image/upload/v1704295679/grid_landscape_ojmfpg.jpg')",
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                            }}
+                        >
 
                             <div
-                                className="absolute inset-0 bg-no-repeat -z-50 animate__animated animate__pulse "
+                                className={`absolute sel-div inset-0 bg-no-repeat animate__animated animate__pulse ${imgLoaded ? 'loaded' : ''}`}
                                 style={{
-                                    backgroundImage: "url('https://res.cloudinary.com/dfsvudyfv/image/upload/v1696753647/wp7490243_he8dqc_1_gkqwbd.jpg')",
                                     transform: "scaleX(-1) ",
                                     backgroundSize: "cover",
                                     backgroundPosition: "center",
                                 }}
-                            ></div>
+                                
+                            >
+                                <img className='w-full h-full object-cover'
+                                 src="https://res.cloudinary.com/dfsvudyfv/image/upload/v1696753647/wp7490243_he8dqc_1_gkqwbd.jpg" alt=""
+                                 onLoad={handleImageLoaded}
+                                 />
+                            </div>
+
+                            
 
                             <div className="z-50 flex flex-col justify-center items-center  w-full h-3/4  ">
                                 <h1 className="my-element animate__animated animate__flipInX animate__slower  text-[3.3rem]  sm:text-[3.5rem] mx-auto md:text-[4.8rem] lg:text-[5.8rem] xl:text-[6rem] 2xl:text-[6.3rem]  text-white font-bold sm:tracking-[0.6rem] tracking-[4.3px]" style={{
