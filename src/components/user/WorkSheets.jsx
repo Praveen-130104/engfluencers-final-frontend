@@ -142,15 +142,17 @@ const WorkSheets = () => {
                                                                             <div key={id}
                                                                                 className="hover:cursor-pointer border-0 border-b-2 border-sky-200 w-full my-2 hover:shadow-lg group text-blue-800 hover:bg-white align-middle "
                                                                             >
+                                                                                <div className="bg-red-300 w-full h-auto truncate">
                                                                                 <li
                                                                                     key={collection._id}
                                                                                     onClick={() => handleCollectionClick(collection)}
                                                                                     className={`py-4 transition-all ease-in-out group-hover:scale-105 group-hover:translate-x-4 duration-300 font-semibold text-xl ${collection === selectedCollection ? "text-blue-900 shadow-md scale-105 underline bg-white translate-x-4" : "text-black"} ${collection.name.length > 20 ? 'marquee' : ''}   hover:bg-white hover:text-blue-600 px-4 flex items-center justify-between`}
                                                                                 >
-                                                                                    <p className=" truncate ">
+                                                                                    <p className=" ">
                                                                                         {collection.name.toUpperCase()}
                                                                                     </p>
                                                                                 </li>
+                                                                                    </div>
                                                                             </div>
                                                                         ))}
 
