@@ -54,13 +54,17 @@ const Home = () => {
                 (
                     <>
                         <div className="w-full h-screen relative sm:flex flex-col justify-center items-center overflow-hidden" 
+                        >
+                            <div className="w-full inset-0 absolute"
                             style={{
                                 backgroundImage: "url('https://res.cloudinary.com/dfsvudyfv/image/upload/v1704295679/grid_landscape_ojmfpg.jpg')",
                                 backgroundSize: "cover",
                                 backgroundPosition: "center",
-                                  zIndex: -1000,
+                                zIndex: -1000,
                             }}
-                        >
+                            >
+
+                            </div>
 
                             <div
                                 className={`absolute sel-div inset-0 bg-no-repeat animate__animated animate__pulse ${imgLoaded ? 'loaded' : ''}`}
@@ -68,7 +72,7 @@ const Home = () => {
                                     transform: "scaleX(-1) ",
                                     backgroundSize: "cover",
                                     backgroundPosition: "center",
-                                  
+                                    zIndex: -1000,                                  
                                 }}
                                 
                             >
@@ -151,7 +155,7 @@ const Home = () => {
                                 </svg>
                             </div>
 
-                            <div className="hidden md:block overflow-visible absolute top-0 z-0"
+                            <div className="hidden md:block overflow-visible absolute top-0 -z-10"
                                 style={{
                                     position: 'fixed',
                                     transform: "scaleX(-1) ",
