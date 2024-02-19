@@ -58,6 +58,7 @@ const Home = () => {
                                 backgroundImage: "url('https://res.cloudinary.com/dfsvudyfv/image/upload/v1704295679/grid_landscape_ojmfpg.jpg')",
                                 backgroundSize: "cover",
                                 backgroundPosition: "center",
+                                  zIndex: -1000,
                             }}
                         >
 
@@ -67,6 +68,7 @@ const Home = () => {
                                     transform: "scaleX(-1) ",
                                     backgroundSize: "cover",
                                     backgroundPosition: "center",
+                                  
                                 }}
                                 
                             >
